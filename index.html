@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jacob Barbulescu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/audio.css">
+    <link rel="stylesheet" href="css/start-page.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/3d.css">
+  </head>
+  <body id="body">
+    <div id="start-page-container">
+      <div id="title">
+        <div>
+          <h1 class="expandable">Jacob Barbulescu</h1>
+          <br />
+          <h2 class="expandable">Bachelors in Computer Science<br />Aspiring Game Developer</h2>
+        </div>
+      </div>
+      <div id="contact">
+        <div>
+          <div id="contact-inner">
+            <div id="contact-title">
+              <h2>CONTACT:</h2>
+            </div>
+            <div id="contact-info">
+              <a href="mailto:jrbarbulescu@gmail.com" target="_blank"><image class="hoverable expandable" src="images/Contact Links/Email Logo.png" width="50" height="50" alt="Email"></image></a>
+              <a href="https://www.linkedin.com/in/jacob-barbulescu-22291429a/" target="_blank"><image class="hoverable expandable" src="images/Contact Links/Linkedin Logo.png" width="50" height="50" alt="LinkedIn"></image></a>
+              <a href="https://github.com/JacobBarbulescu" target="_blank"><image class="hoverable expandable" src="images/Contact Links/Github Logo.png" width="50" height="50" alt="Github"></image></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="portrait">
+        <div id="me">
+          <img id="picture-of-me" src="images/Me.png" width="650" height="600">
+        </div>
+      </div>
+      <div id="bg-image"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <br />
+    <div class="text-box">
+      <p>Hi there! I am Jacob Barbulescu, a 2nd year Computer Science Undergraduate at Stevens Institute of Technology.</p>
+      <br />
+      <h2 id="welcome" class="expandable"><strong>Welcome to my website!</strong></h2>
+      <br />
+      <p>This website is to show off the various projects and interests I've pursued throughout my time at college.</p>
+      <p>I hope you enjoy these as much as I do!</p>
+    </div>
+
+    <br />
+    <br />
+    <br />
+
+
+    <div class="dropdown">
+      <div class="dropdown-title hoverable">
+        <h1>Video Games</h1>
+      </div>
+      <div class="dropdown-body">
+        <br />
+
+        <p>Video games are my passion, and building games of my own has been a wonderful journey.</p>
+        <p>Starting in high school, I taught myself how to use game engines such as <strong>Unity</strong> and <strong>Game Maker Studio</strong>, and I even made my own engine via <strong>OpenGL</strong>!</p>
+        <p>I am a member of the <strong>Stevens Game Development Club</strong>, where I have participated in their game jams and learned a lot about how professionals make their games.</p>
+        <p>I work at it as much as I can outside of school, and I have made a few projects so far that I am proud of.</p>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="info-block">
+          <image id="oregon-main-picture" class="left-image expandable" src="images/Oregon Road 83/Oregon 83 Splash.jpg" width="960" height="540"></image>
+
+          <br />
+          <br />
+          <p><a href="https://outrider.org/projects/oregon-road-83" target="_blank">Oregon 83</a> is a project currently being developed by Professor Alex Wellerstein at Stevens Institute of Technology.&nbsp;The game is designed for the player to experience an alternate history America where the nuclear tensions in 1983 boiled over and the world entered a nuclear exchange.</p>
+          <br />
+          <p>The game combines heavy research of the time period with an homage to The Oregon Trail to make a historically accurate survival game where the player must cross the country to reach their brother's bunker in Oregon.</p>
+          <br />
+          <p>This project is the first large-scale video game that I have ever worked on, and it has taught me many unique lessons.</p>
+          <br />
+
+          <br />
+
+          <p>My work on the project was with the audio team.&nbsp;I not only contributed to the team by making music and sound effects myself, but also by helping to implement the audio in the game engine.</p>
+          <p>The game uses a custom-built Javascript engine, meaning that it was up to the audio team to organize the audio system in the code.&nbsp;We eventually settled on <a href="https://www.fmod.com/" target="_blank">FMOD</a>, a third party software meant to allow game developers to implement dynamic audio.</p>
+          <p>By setting up audio events and parameters to control those events, we could abstract the code behind playing the proper audio at the right time to a simple changing-of-variables for the programmers.&nbsp;This also allowed us to experiment with dynamic audio systems. For example, we drafted a general travel theme that would change based on which companions you had in your party.</p>
+          
+          <br />
+
+          <div class="image-row">
+            <img src="images/Oregon Road 83/FL.png" class="expandable" width="460" height="375">
+            <img src="images/Oregon Road 83/Gameplay.png" class="expandable" width="400" height="600">
+            <img src="images/Oregon Road 83/FMOD.png" class="expandable" width="550" height="350">
+          </div>
+
+          <br />
+
+          <p>The most important lesson that I learned from this project was the value of organization.</p>
+          <p>The audio team alone had 11 people in it, and so I thought production would be easy. However, the opposite was true.</p>
+          <p>That many people working on the same project lead to clashing ideas, redundant work, and a general lack of direction.</p>
+          
+          <br />
+
+          <p>One of the most important contributions that I made to the project wasn't any of the music that I made or the FMOD system that I implemented, but this:</p>
+          <p>I helped to create a list of all of the music and sound effects that we absolutely needed for the project, ranging from car engine noises to the menu theme. I then made an FMOD event for each piece of audio that we needed and shared it with the team.</p>
+          <p>Now, instead of simply working on whatever they thought was worth doing, the team had a clear, managable list of individual tasks to work through.</p>
+          <p>This significantly improved the workflow of the team, as now team members were able to work on the project and feel confident that what they were doing was effective.</p>
+
+          <br />
+
+          <p>Although the project is still under development, I am extremely grateful to work on a video game of a larger scale. It taught me many valuable lessons about video game development that will stick with me for the rest of my career.</p>
+          <p>I learned the importance of organization, how to work within a larger team, and how to communicate with others to make sure that everyone worked towards one unified vision.</p>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+        
+        <p><strong>Deck Thrower</strong> was made for the first Stevens Game Development Club's Game Jam that I participated in.</p>
+        <p>I had 48 hours to build the game based on the theme they gave (Unusual Weapon).</p>
+        <p>I was able to finish the game by the deadline and got 2nd place in the entire jam!</p>
+        <p>I made all of the game's assets myself during the jam.</p>
+        <br />
+        <p>Some time after the jam, I decided to polish up the game into a more completed state.</p>
+        <p>I added art, sound, and music, added a main menu, and also squashed many bugs.</p>
+        <p>I'm proud of the game that it has become.</p>
+        <br />
+        <p>Click the image to play it in the browser. Simply use <strong>WASD</strong> to move and <strong>Left Click</strong> to shoot a card. <strong>Scroll</strong> or use <strong>numkeys</strong> to choose your card.</p>
+
+        <div onclick="loadGame(0)" id="deck-thrower-image" class="preview-image hoverable">
+          <image src="images/Deck Thrower.png" width="1000" height="700"></image>
+          <image class="play-button" src="images/Play Button.png" width="300" height="300">
+        </div>
+        <iframe id="deck-thrower" frameborder="0" src="https://itch.io/embed-upload/12133219?color=054494" allowfullscreen="" width="1000" height="700"><a href="https://gamerhtml.itch.io/deck-thrower">Play Deck Thrower on itch.io</a></iframe>
+        <br />
+        <button id="deck-thrower-restart" onclick="loadGame(0)">Reload Game</button>
+        <button id="deck-thrower-quit" onclick="deloadGame(0)">End Game</button>
+
+        <br />
+        <hr />
+        <br />
+
+        <p><strong>Fruity Catcher</strong> was the first game that I ever fully completed.</p>
+        <p>Although it is simple, it took over a month to develop simply because I was teaching Unity to myself as I made it.</p>
+        <p>This game is a fruit catcher game, where the player must move around the ground to catch fruit falling from a tree.</p>
+        <p>However, I also added bombs and powerups to make things more exciting!</p>
+        <p>The powerups range from making the player bigger to slowing down gravity to having everything spawn in faster!</p>
+        <p>Every asset in the game, from the sprites to the music, is entirely made by me.</p>
+        <br />
+        <p>One of the largest challenges of the game was organization.</p>
+        <p>Even something as simple as keeping score required a lot of work to keep everything organized.</p>
+        <p>I eventually learned to use game managers to keep every aspect of the game modular and abstracted.</p>
+        <p>Rather than have my collision code also apply the powerup when the player picks up one, it simply asks the powerup manager to do so.</p>
+        <p>Rather than have my menu screen handle the transition to the main game, I simply had my menu manager do the work itself.</p>
+        <br />
+        <p>I eventually submitted this game to the <strong>Computer and Console Gaming Society</strong> and the <strong>Stevens Game Development Club's</strong> gaming tournament.</p>
+        <p>This event had many students on my campus come together and compete to earn in the best scores in games developed by the Stevens Game Development Club.</p>
+        <p>It was fun and very rewarding to see a whole group of people play my game and get very competitive over it!</p>
+        <br />
+        <p>Click the image to play it in the browser. Simply use <strong>A</strong> and <strong>D</strong> or <strong>left arrow</strong> and <strong>right arrow</strong> to move and catch the fruit!</p>
+        
+        <div onclick="loadGame(1)" id="fruity-catcher-image" class="preview-image hoverable">
+          <image src="images/Fruity Catcher.png" width="1000" height="700"></image>
+          <image class="play-button" src="images/Play Button.png" width="300" height="300">
+        </div>
+        <iframe id="fruity-catcher" frameborder="0" src="https://itch.io/embed-upload/11967967?color=7b53ad" allowfullscreen="" width="1000" height="700"><a href="https://gamerhtml.itch.io/fruity-catcher">Play Fruity Catcher on itch.io</a></iframe>
+        <br />
+        <button id="fruity-catcher-restart" onclick="loadGame(1)">Reload Game</button>
+        <button id="fruity-catcher-quit" onclick="deloadGame(1)">End Game</button>
+
+        <br />
+        <br />
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropdown-title hoverable">
+        <h1>Coding</h1>
+      </div>
+      <div class="dropdown-body">
+        <br />
+        <p>Coding has been a passion in my life since my Freshman year of high school.</p>
+        <p>Covid was still keeping us all trapped indoors, so I decided on a whim to learn Python, and I just kept going from there.</p>
+        <p>Through both school and personla projects, I have been developing my knowledge on programming constantly</p>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!--The cube-->
+        <!--Used to move the cube up and down-->
+        <div class="up-down">
+          <!--Moves the cube left and right-->
+          <div class="left-right cube-container">
+            <!--The cube itself (what we rotate)-->
+            <div id="cube1" class="cube">
+              <!--The faces of the cube-->
+              <div class="face face-front"></div>
+              <div class="face face-back"></div>
+              <div class="face face-left"></div>
+              <div class="face face-right"></div>
+              <div class="face face-up"></div>
+              <div class="face face-down"></div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <p><strong>Hold down</strong> these buttons to mess with the cube.</p>
+        <button onmousedown="expandCube('cube1')" onmouseup="shrinkCube('cube1')" onmouseleave="shrinkCube('cube1')">Expand</button>
+        <button onmousedown="perspectCube('cube1')" onmouseup="unperspectCube('cube1')" onmouseleave="unperspectCube('cube1')">Grow</button>
+        <button onmousedown="freezeCube('cube1')" onmouseup="unfreezeCube('cube1')" onmouseleave="unfreezeCube('cube1')">Freeze</button>
+        <button onmousedown="invertCube('cube1')" onmouseup="uninvertCube('cube1')" onmouseleave="uninvertCube('cube1')">Invert</button>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="info-block">
+          <p>In a project for my <strong>Computer Architecture and Organization</strong> course at Stevens Institute of Technology, I was assigned with creating a <strong>custom CPU</strong> from scratch.</p>
+          <p>Using <strong>Logism Pro</strong>, I was able to make a CPU with 4 registers, an accessible RAM for data, and a display to show values.</p>
+          <p>I also created an Assembly language that could be compiled into binary code and be executed by the CPU.</p>
+          <br />
+
+          <img id="barbusoft-main-picture" src="images/Barbusoft/Main CPU.png" class="left-image expandable" width="420" height="240">
+          <br />
+          <p>It was a fun challenge creating as much functionality as possible with basic instructions.&nbsp;I assigned only 16 bits to each instruction, yet still had an addition, subtraction, loading, storing, displaying, and setting function for a user to implement in their programs.&nbsp;The CPU allowed for both the use of 2 registers or a register and a 4-bit immediate number for its instructions, and the user could even display register values or immediate numbers.</p>
+          <br />
+          <p>The CPU also had a RAM that was accessible by the program.&nbsp;Register values could be stored at specified addresses in the RAM, and data could also be retrieved from the RAM and stored in registers.&nbsp;The instructions for a program were stored in a separate RAM, and a program counter would automatically iterate through the stored instructions until it reach an empty instruction.&nbsp;At that point, the CPU would automatically stay at that empty instruction to end the program.</p>
+          <br />
+          <p>The user would be able to write an assembly program, then compile it using a compiler that I wrote in Python.&nbsp;The compiler converted a custom .barb assembly file into a hexadecimal image readable by the CPU, and the compiler allowed for comments, whitespace, and empty lines.</p>
+          <br />
+          <p>I also made a manual for the CPU to help others understand and write programs for it.&nbsp;It gets into the grittier details of how the CPU works and how one can write, compile, and run code for it.&nbsp;Feel free to give it a read by <a href="./pdf/Barbusoft Manual.pdf" target="_blank" download>downloading the manual</a>.</p>
+          
+          <div class="image-row">
+            <img src="images/Barbusoft/ALU.png" class="expandable" width="460" height="375">
+            <img src="images/Barbusoft/Compiler.png" class="expandable" width="400" height="600">
+            <img src="images/Barbusoft/Program.png" class="expandable" width="550" height="350">
+          </div>
+
+          <p>I was able to make the CPU, assembly language, and compiler in a day, and I am very proud of the result.</p>
+          <p>I've spent a fair bit of time just writing custom programs for the CPU and watching it do its thing.&nbsp;Assembly becomes a lot more fun when you're the one who designed it!</p>
+
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="info-block">
+          <p>I was an involved environmental activist at my high school, and so I was invited to join the <a href="https://www.climaterealityproject.org/" target="_blank">Climate Reality</a> NJ Youth Chapter.</p>
+          <p>After talking about my coding hobby, they quickly arranged for me to build a website for their chapter.</p>
+          <br />
+
+          <img id="climate-main-picture" src="images/Climate Website/Main.png" class="right-image expandable" width="420" height="240">
+          <p>Effectively, the website was meant to be a database full of articles for teachers and students.&nbsp;Teachers would be given learning plans and student would be given educational reading on environmental issues.&nbsp;The most difficult part was this: every member had to be able to go onto the website, write an article, and post it onto the website to be accessed.&nbsp;I had to find a secure yet user-friendly way for my teammates to write these articles with, and this took me some time to figure out.</p>
+          <br />
+          <p>I eventually settled on <a href="https://www.tiny.cloud" target="_blank">TinyMCE</a>, a rich text editor than can easily be implemented into a website.&nbsp;A teammate could go onto an article creation page, use TinyMCE to write the article (including content such as images and videos), add a title, tags, etc., then send it to the server as an html file.&nbsp;The server would then take this html file and store it in the porper folder (There was a folder tree of teachers and students, and each tree was separated into grade levels).&nbsp;Now, a user could go onto the site and search for an article using keywords and filters for user-type and grade level.&nbsp;The website would automatically find every relevant article and list them out for the user to enter. When clicked, the user would be brought to the corresponding article.</p>
+          
+          <div class="image-row">
+            <img src="images/Climate Website/Article Creation.png" class="expandable" width="460" height="375">
+            <img src="images/Climate Website/Search List.png" class="expandable" width="400" height="600">
+            <img src="images/Climate Website/Article.png" class="expandable" width="550" height="350">
+          </div>
+
+          <br />
+          <p>The website was eventually fully finished and hosted, and my team immediately began using to create and post their resources.&nbsp;Altough the website is no longer online, I am still proud of the contribution that I made to the Climate Reality project.</p>
+          <br />
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="info-block">
+          <p>The first website I ever made was for a friend. He offered to pay me some cash to make him a calendar website, so I immediately got to work learning how to even make a website.</p>
+          <br />
+          <img id="henry-main-picture" src="images/Henry Website/Main.png" class="left-image expandable" width="420" height="240">
+          <p>He effectively wanted to be able to add events to an online calendar (like Google Calendar), except everybody who went on the website accessed and modified the same calendar.&nbsp;Although the website was simple, sending user input to the server, storing it, then later retrieving it was a big challenge for me to learn.&nbsp;I eventually came up with a solution using <strong>Node.js</strong> involving using a manifest text file to store the events, then the server would read this text file and send the events to the user.</p>
+          <br />
+          <p>The user was able to add an event, specifying its name, date, time, location, and description, and this would be sent and stored in the server.&nbsp;The user could then view a month or a day.&nbsp;The month would show a list of days with events in them, and this would have a brief look at the events.&nbsp;The user could also look at a specific day, and here they would find more details on each event.&nbsp;Lastly, the user could delete any event, making the calendar fully modifiable.</p>
+          
+          <div class="image-row">
+            <img src="images/Henry Website/Month.png" class="expandable" width="460" height="375">
+           <img src="images/Henry Website/Create.png" class="expandable" width="400" height="250">
+            <img src="images/Henry Website/Day.png" class="expandable" width="550" height="350">
+          </div>
+
+          <br />
+          <p>It worked after 2 weeks, and I had officially finished my first coding commission!</p>
+        </div>
+        
+        <br />
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropdown-title hoverable">
+        <h1>Music</h1>
+      </div>
+      <div class="dropdown-body">
+        <br />
+        <p>Music has always been a large part of my life from childhood.</p>
+        <p>I started off by playing the piano and eventually trombone, but in high school I evolved from playing music to making music.</p>
+        <p>Using <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio</a>, I have been creating song after song over the years, slowly honing my skills.</p>
+        <p>I challenge myself to work in a variety of genres, and I always make my own music for the video games that I develop.</p>
+
+        <br />
+
+        <div id="audio-container">
+          <div id="weeoo-info" class="left-info">
+            <h2>Weeoo</h2>
+            <p>This song was a challenge I gave myself to make a song entirely out of samples.</p>
+            <p>I used <a href="https://www.youtube.com/watch?v=5Ag94UU01TQ" target="_blank" class="hoverable">Natalie Cordet's Cover of&nbsp;Take Five</a> as my base.</p>
+            <p>I also used various sound effects and voxes that I've collected over the years.</p>
+            <p>The most fun part was taking the original cover which is in 5/4 time and making it into a 4/4 song. It really makes the song feel enitrely different from it's origin!</p>
+          </div>
+          <div id="weeoo" class="right-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable right-audio" id=".54545454545454s">
+              <source src="audio/Weeoo.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="shades-on-info" class="right-info">
+            <h2>Shades On</h2>
+            <p>This song was a challenge for me to only use MIDI instruments for my song.</p>
+            <p>I wanted a beach aesthetic for my song, and I was inspired by early 2000s racing games.</p>
+            <p>The hardest part was making the MIDI instruments sound fuller. Although it matched the retro game aesthetic, I used a fair bit of post processing to make the instruments really pop.</p>
+          </div>
+          <div id="shades-on" class="left-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id=".88888888888888s">
+              <source src="audio/Shades On.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="atomic-stars-info" class="left-info">
+            <h2>Atomic Stars</h2>
+            <p>This was one of the songs I made for the <a href="https://outrider.org/projects/oregon-road-83" target="_blank">Oregon 83 Project</a> that I was a member of.</p>
+            <p>The game has an 8-bit style, which made for an interesting challenge in conveying emotion with simple sounds.</p>
+            <p>The most fun part was making the instruments myself. I started with basic sound waves such as sine waves and square waves and combined them with post processing to create unique instruments.</p>
+            <p>My vision was a somber yet hopeful feeling, and I feel that I accomplished it with this song.</p>
+          </div>
+          <div id="atomic-stars" class="right-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id="1.428571429s">
+              <source src="audio/Atomic Stars.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="rooftops-info" class="right-info">
+            <h2>Rooftops</h2>
+            <p>This was a song that I made for the main menu of a racing game I started to develop.</p>
+            <p>I wanted a calm song that still had a driving beat (no pun intended).</p>
+          </div>
+          <div id="rooftops" class="left-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id=".923076923s">
+              <source src="audio/Rooftops.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="sodium-lights-info" class="left-info">
+            <h2>Sodium Lights</h2>
+            <p>This was another song for the racing game I was developing at the time.</p>
+            <p>I was still experimenting with the theme of the game, and this song was branching towards a more high energy game than Rooftops was made for.</p>
+            <p>My favorite part about the song is the strings. Although it seems like a small addition, they transformed the song into the exact early 2000s style that I wanted.</p>
+          </div>
+          <div id="sodium-lights" class="right-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id=".705882352s">
+              <source src="audio/Sodium Lights.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="blackout-info" class="right-info">
+            <h2>Blackout</h2>
+            <p>This song came from me being bored one Sunday afternoon and deciding to make something fun for myself.</p>
+            <p>The most challenging yet interesting part of the song was having the two different "phases" of the song mesh. I wanted to give the listener a sense of breaking through the clouds during the transitions, going from dark and heavy to light and airy.</p>
+            <p>This song was also the first one where I used automation clips to enhance my sound, and it really helped me to make more dynamic music.</p>
+          </div>
+          <div id="blackout" class="left-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id=".750s">
+              <source src="audio/Blackout.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="sky-high-info" class="left-info">
+            <h2>Sky High</h2>
+            <p>Sky High was the first song where I truly dived into FL Studio's audio mixer and patches.</p>
+            <p>Fine tuning the instruments into exactly what I wanted and even spacing them across the stereo not only enchanced the song, but gave me a stronger sense of balance with my music.</p>
+          </div>
+          <div id="sky-high" class="right-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id=".75000001s">
+              <source src="audio/Sky High.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+
+          <div id="alien-reqiuem-info" class="right-info">
+            <h2>Alien Reqiuem</h2>
+            <p>This was one of the first songs that I ever made using FL Studio, and it's what motivated me to stick with making music.</p>
+            <p>I didn't even know what mixing meant or how to add effects to the instruments, so I spent a long time finding instruments that sounded good from the getgo.</p>
+            <p>Although the process behind it was very rough, I am still happy with how this song came out in the end. It's definitely one of my more unique pieces!</p>
+          </div>
+          <div id="alien-reqiuem" class="left-audio">
+            <audio controls controlsList="nodownload noplaybackrate" class="hoverable expandable" id="1.333333333s">
+              <source src="audio/Alien Reqiuem.mp3" type="audio/mpeg">
+              Your browser does not support audio
+            </audio>
+          </div>
+        </div>
+
+        <br />
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <button onclick="location.href='#start-page-container'">Go back to top</button>
+
+    <br />
+    <br />
+
+    <div id="cursor-border"></div>
+    <div id="cursor"></div>
+
+    <script src="js/display.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/3d.js"></script>
+    <script src="js/cursor.js"></script>
+  </body>
+</html>
