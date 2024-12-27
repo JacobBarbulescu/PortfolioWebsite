@@ -1,0 +1,257 @@
+:root {
+    --font: rgb(236, 223, 204);
+    --cursor-border: rgba(236, 223, 204, .3);
+    --accent: rgb(105, 117, 101);
+    --bright-accent: rgb(145, 157, 141);
+    --accent-background: rgba(105, 117, 101, .3);
+    --text-shadow: rgba(0, 0, 0, .9);
+    --background: rgb(30, 32, 30);
+    --title-background: rgba(30, 32, 30, .3);
+    --object: rgb(60, 61, 55);
+}
+
+body {
+    background-color: var(--background);
+    
+    /*Default values applied to all elements*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    /*Prevent the horizontal scrollbar and prevents overscolling*/
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+p, a, h1, h2, br, button {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+
+    color: var(--font);
+
+    margin: 0;
+    padding: 0;
+
+    /*Prevents the user from highlighting text*/
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 60pt;
+}
+h2 {
+    font-size: 24pt;
+}
+
+hr {
+    border: 1px solid var(--accent); 
+}
+
+/*When these elements are hovered over, they slowly increase in size*/
+.expandable {
+    transition: scale .7s;
+}
+.expandable:hover {
+    scale: 1.1;
+}
+
+p {
+    font-size: 17pt;
+
+    margin: 10px;
+}
+
+.sway {
+    animation-name: sway;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+@keyframes sway {
+    0% {
+      transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(5deg);
+    }
+    100% {
+        transform: rotateZ(-5deg);
+    }
+}
+
+.text-box {
+    border-style: solid;
+    border-radius: 10pt;
+    border-color: var(--object);
+
+    padding: 10pt;
+    margin: 3pt;
+
+    display: inline-block;
+}
+
+.dropdown {
+    margin: -6px;
+}
+.dropdown-title {
+    border-width: 0;
+    border-top-width: 6px;
+    border-bottom-width: 6px;
+    border-style: solid;
+    border-color: var(--accent);
+
+    background-color: var(--object);
+}
+.dropdown-body {
+    display: none;
+
+    animation: show .6s ease-out forwards;
+
+    opacity: 0;
+
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+}
+@keyframes show {
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.preview-image {
+    position: relative;
+}
+/*Center the play button on the image*/
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+
+    opacity: .5;
+
+    transition: opacity .5s, scale .5s, transform .5s;
+}
+.preview-image:hover>.play-button {
+    opacity: 1;
+
+    scale: 1.1;
+
+    transform: translate(-45%, -45%) rotateZ(360deg);
+}
+
+button {
+    padding: 5pt;
+
+    margin: 5px;
+
+    font-size: 18pt;
+
+    background-color: var(--object);
+    
+    border-style: solid;
+    border-radius: 10pt;
+    border-color: var(--accent);
+}
+/*Have the button change when being pressed down*/
+button:active {
+    color: var(--accent);
+
+    background-color: var(--font);
+}
+
+.left-image {
+    float: left;
+}
+.right-image {
+    float: right;
+}
+.left-image, .right-image {
+    width: 30%;
+    height: auto;
+
+    min-width: 350px;
+
+    margin: 25px;
+}
+
+img:not(#picture-of-me):not(.play-button):not(#contact-info>a>img) {
+    border-style: solid;
+    border-color: var(--accent);
+
+    max-width: 100%;
+    height: auto;
+}
+
+.image-row {
+    margin: auto;
+
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+}
+.image-row>img {
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    margin-top: 10px;
+
+    width: 30%;
+    height: auto;
+
+    min-width: 300px;
+}
+
+.info-block {
+    margin: auto;
+
+    width: 95vw;
+
+    display: block;
+}
+
+#henry-main-picture {
+    width: 30%;
+    height: auto;
+
+    min-width: 350px;
+
+    margin: 25px;
+}
+
+#oregon-main-picture {
+    width: 40%;
+    height: auto;
+
+    min-width: 350px;
+
+    margin: 25px;
+}
+#oregon-main-picture:hover {
+    scale: 1.05;
+}
+
+#barbusoft-main-picture {
+    width: 40%;
+    height: auto;
+
+    min-width: 350px;
+
+    margin: 25px;
+}
+#barbusoft-main-picture:hover {
+    scale: 1.05;
+}
+
+#welcome {
+    font-size: 40pt;
+}

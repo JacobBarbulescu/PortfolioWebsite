@@ -1,0 +1,107 @@
+.up-down {
+    animation: up-down .6s ease-in-out alternate-reverse infinite;
+}
+@keyframes up-down {
+    0% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+.left-right {
+    animation: left-right 2s ease-in-out alternate-reverse infinite;
+}
+@keyframes left-right {
+    0% {
+        transform: translateX(-25vw);
+    }
+    100% {
+        transform: translateX(25vw);
+    }
+}
+
+.cube-container {
+    /*This properly center the cube and its axes of rotation*/
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+
+    perspective: 600px;
+
+    transition: perspective 1s;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transform-origin: center;
+
+    transform: translateZ(-100px);
+
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: translateZ(-1000px) rotateX(0) rotateY(360deg) rotateZ(0);
+    }
+    50% {
+        transform: translateZ(-1000px) rotateX(180deg) rotateY(180deg) rotateZ(90deg);
+    }
+    100% {
+        transform: translateZ(-1000px) rotateX(360deg) rotateY(0) rotateZ(0);
+    }
+}
+
+
+.face {
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 15px;
+    border-color: var(--accent);
+
+    transition: transform 1s;
+}
+
+.face-front {
+    transform: translateX(-50%) translateY(-50%) translateZ(100px) rotateY(0);
+
+    background-color: rgba(255, 0, 0, .5);
+
+    /*Adds an image to the front of the cube*/
+    /*background-image: url("../images/Bean.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;*/
+}
+.face-back {
+    transform: translateX(-50%) translateY(-50%) translateZ(-100px) rotateY(180deg);
+
+    background-color: rgba(204, 0, 255, 0.5);
+}
+.face-left {
+    transform: translateX(-50%) translateY(-50%) translateX(-100px) rotateY(-90deg);
+
+    background-color: rgba(255, 145, 0, 0.5);
+}
+.face-right {
+    transform: translateX(-50%) translateY(-50%) translateX(100px) rotateY(90deg);
+
+    background-color: rgba(0, 0, 255, .5);
+}
+.face-up {
+    transform: translateX(-50%) translateY(-50%) translateY(100px) rotateX(90deg);
+
+    background-color: rgba(229, 255, 0, 0.5);
+}
+.face-down {
+    transform: translateX(-50%) translateY(-50%) translateY(-100px) rotateX(-90deg);
+
+    background-color: rgba(0, 255, 0, 0.5);
+}

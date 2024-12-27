@@ -1,0 +1,136 @@
+/*Puts the audio components into a neat grid*/
+#audio-container {
+    width: 90vw;
+
+    margin: auto;
+
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: var(--accent);
+
+    background-color: var(--accent-background);
+
+    display: grid;
+    row-gap: 30pt;
+
+    /*Describes the shape of the grid*/
+    grid-template-columns: auto;
+    grid-template-areas: 
+        "weeoo-info weeoo-info weeoo-info weeoo weeoo"
+        "shades-on shades-on shades-on-info shades-on-info shades-on-info"
+        "atomic-stars-info atomic-stars-info atomic-stars-info atomic-stars atomic-stars"
+        "rooftops rooftops rooftops-info rooftops-info rooftops-info"
+        "sodium-lights-info sodium-lights-info sodium-lights-info sodium-lights sodium-lights"
+        "blackout blackout blackout-info blackout-info blackout-info"
+        "sky-high-info sky-high-info sky-high-info sky-high sky-high"
+        "alien-reqiuem alien-reqiuem alien-reqiuem-info alien-reqiuem-info alien-reqiuem-info";
+}
+#audio-container>* {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: var(--accent);
+
+    /*This centers all of the content bother horizontally and vertically*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--background);
+
+    padding: 20pt;
+}
+#audio-container>*>* {
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+#weeoo {
+    grid-area: weeoo;
+}
+#weeoo-info {
+    grid-area: weeoo-info;
+}
+#shades-on {
+    grid-area: shades-on;
+}
+#shades-on-info {
+    grid-area: shades-on-info;
+}
+#atomic-stars {
+    grid-area: atomic-stars;
+}
+#atomic-stars-info {
+    grid-area: atomic-stars-info;
+}
+#rooftops {
+    grid-area: rooftops;
+}
+#rooftops-info {
+    grid-area: rooftops-info;
+}
+#sodium-lights {
+    grid-area: sodium-lights;
+}
+#sodium-lights-info {
+    grid-area: sodium-lights-info;
+}
+#blackout {
+    grid-area: blackout;
+}
+#blackout-info {
+    grid-area: blackout-info;
+}
+#sky-high {
+    grid-area: sky-high;
+}
+#sky-high-info {
+    grid-area: sky-high-info;
+}
+#alien-reqiuem {
+    grid-area: alien-reqiuem;
+}
+#alien-reqiuem-info {
+    grid-area: alien-reqiuem-info;
+}
+
+.left-info {
+    border-right-style: dashed;
+}
+.right-info {
+    border-left-style: dashed;
+}
+
+/*Lets me change how the audio player looks*/
+audio::-webkit-media-controls-panel {
+    background-color: var(--font);
+
+    color: var(--font);
+}
+/*Stops the cursor from appearing on any audio source*/
+audio::-webkit-media-controls-panel, audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-volume-slider {
+    cursor: none;
+}
+
+/*Has the background color of an audio block flash to the music*/
+.disco {
+    animation-name: disco;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+@keyframes disco {
+    0% {
+        background-color: var(--accent);
+    }
+    49% {
+        background-color: var(--background);
+    }
+    50% {
+        background-color: var(--accent);
+    }
+    99% {
+        background-color: var(--background);
+    }
+    100% {
+        background-color: var(--accent);
+    }
+}

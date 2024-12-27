@@ -1,0 +1,33 @@
+/*The outer circle of the cursor*/
+#cursor-border {
+    
+    
+    height: 30px;
+    width: 30px;
+
+    background-color: var(--cursor-border);
+
+    border-radius: 50%;
+    position: absolute;
+
+    pointer-events: none;
+}
+
+/*The inner circle of the cursor*/
+#cursor {
+    height: 8px;
+    width: 8px;
+
+    background-color: var(--accent);
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--background);
+
+    border-radius: 50%;
+    position: absolute;
+
+    transition: width .1s, height .1s;
+
+    pointer-events: none;
+}
