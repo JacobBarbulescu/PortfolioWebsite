@@ -63,6 +63,13 @@ p {
     margin: 10px;
 }
 
+a:hover {
+    color: var(--bright-accent);
+}
+a:active {
+    color: var(--accent);
+}
+
 .sway {
     animation-name: sway;
     animation-timing-function: ease-in-out;
@@ -254,4 +261,13 @@ img:not(#picture-of-me):not(.play-button):not(#contact-info>a>img) {
 
 #welcome {
     font-size: 40pt;
+}
+
+#HeraHealth-Logo {
+    width: 20%;
+    height: auto;
+
+    min-width: 200px;
+
+    margin: 25px;
 }
