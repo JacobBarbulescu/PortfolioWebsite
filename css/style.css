@@ -250,6 +250,8 @@ img:not(#picture-of-me):not(.play-button):not(#contact-info>a>img) {
 
 .info-block-title {
     font-size: 40pt;
+
+    text-decoration: underline;
 }
 
 #henry-main-picture {
