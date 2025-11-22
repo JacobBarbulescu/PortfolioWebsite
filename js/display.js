@@ -4,6 +4,9 @@ const title = document.getElementById("title");
 const contact = document.getElementById("contact");
 const portrait = document.getElementById("portrait");
 
+//The direct container of my image
+const me = document.getElementById("me");
+
 //Dropdown sections in the body
 const dropdowns = document.querySelectorAll(".dropdown-title");
 
@@ -15,6 +18,16 @@ dropdowns.forEach(dropdown => {
     });
 });
 
+//When my portrait is clicked, have it spin
+me.addEventListener("click", () => {
+    me.classList.remove("flip");
+    me.classList.remove("click-flip");
+    //This has the browser recalculate the transform, effectively resetting the animation
+    void me.offsetWidth;
+    me.classList.add("click-flip");
+});
+
+//Has the landing screen do all of its animations when the page is finished loading
 window.onload = function() {
     //Turns off smooth scrolling
     document.documentElement.style.scrollBehavior = "auto";
@@ -28,6 +41,9 @@ window.onload = function() {
     title.style.transform = "translateX(0)";
     contact.style.transform = "translateX(0)";
     portrait.style.transform = "translateX(0)";
+
+    //Has my portrait flip as it appears on the screen
+    me.classList.add("flip");
 
     //Turns on smooth scrolling
     document.documentElement.style.scrollBehavior = "smooth";
