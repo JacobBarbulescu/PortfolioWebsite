@@ -5,7 +5,7 @@ const contact = document.getElementById("contact");
 const portrait = document.getElementById("portrait");
 
 //The direct container of my image
-const me = document.getElementById("me");
+const me = document.getElementById("picture-of-me");
 
 //Dropdown sections in the body
 const dropdowns = document.querySelectorAll(".dropdown-title");
@@ -20,11 +20,17 @@ dropdowns.forEach(dropdown => {
 
 //When my portrait is clicked, have it spin
 me.addEventListener("click", () => {
+    //Flip the image
     me.classList.remove("flip");
     me.classList.remove("click-flip");
     //This has the browser recalculate the transform, effectively resetting the animation
     void me.offsetWidth;
     me.classList.add("click-flip");
+
+    //Have it bounce, too
+    portrait.classList.remove("bounce");
+    void portrait.offsetWidth;
+    portrait.classList.add("bounce");
 });
 
 //Has the landing screen do all of its animations when the page is finished loading

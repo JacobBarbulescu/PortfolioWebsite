@@ -149,3 +149,36 @@
         transform: rotateY(360deg);
     }
 }
+
+.bounce {
+    animation: bounce .8s ease-out;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    62% {
+        transform: translateY(-50px);
+    }
+    74% {
+        transform: translateY(0px);
+    }
+    82% {
+        transform: translateY(-25px);
+    }
+    90% {
+        transform: translateY(0px);
+    }
+    95% {
+        transform: translateY(-12px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
