@@ -46,7 +46,7 @@ h2 {
 }
 
 hr {
-    border: 1px solid var(--accent); 
+    border: 3px solid var(--accent); 
 }
 
 /*When these elements are hovered over, they slowly increase in size*/
@@ -246,6 +246,10 @@ img:not(#picture-of-me):not(.play-button):not(#contact-info>a>img) {
     width: 95vw;
 
     display: block;
+}
+
+.info-block-title {
+    font-size: 40pt;
 }
 
 #henry-main-picture {
