@@ -40,15 +40,15 @@ for (const link of links) {
 for (let x = 0; x < games.length; x++) {
     //When the game loads, have it detect the mouse entering and leaving it.
     //If entering, hide the custom cursor. If leaving, show the custom cursor.
-    games[x].addEventListener('load', function() {
+    /*games[x].addEventListener('load', function() {
         let iframeDoc = games[x].contentDocument || games[x].contentWindow.document;
         iframeDoc.addEventListener('mouseenter', function () {
-            alert();
-        });
-        iframeDoc.addEventListener('mouseleave', function() {
             console.log('Mouse entered the iframe');
         });
-    });
+        iframeDoc.addEventListener('mouseleave', function() {
+            console.log('Mouse left the iframe');
+        });
+    });*/
 
     deloadGame(x);
 }
