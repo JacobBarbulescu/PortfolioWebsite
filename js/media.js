@@ -112,3 +112,18 @@ function makeClickable (elements) {
         element.classList.add("expandable");
     }
 }
+
+//Every button element on the page
+const images = document.getElementsByTagName("img");
+
+//Add a placeholder image for each image if it fails to load
+function addOnError (images) {
+    for (const image of images) {
+        image.onerror = function() {
+            image.src = "images/Placeholder.png";
+        };
+        console.log("P");
+    }
+}
+
+addOnError(images);

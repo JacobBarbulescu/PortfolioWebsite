@@ -51,12 +51,14 @@
     <br>
     <main>
     <section class="text-box">
-      <p>Hi there! I am Jacob Barbulescu, a 3rd year Computer Science Undergraduate at Stevens Institute of Technology.</p>
+      <p>Hi there! I am Jacob Barbulescu, a 4th year Computer Science Undergraduate at Stevens Institute of Technology.</p>
       <br>
       <h2 id="welcome" class="expandable rainbow"><strong>Welcome to my website!</strong></h2>
       <br>
-      <p>This website is to show off the various projects and interests I've pursued throughout my time at college.</p>
-      <p>I hope you enjoy these as much as I do!</p>
+      <p>I'm an aspiring software engineer who is having a blast learning everything he can about Computer Science. I am especially interested in Artificial Intelligence and the public good it can bring in both the workforce and at home.</p>
+      <br>
+      <p>My biggest motivation in life is helping others. My work at Mathnasium helps children who are behind in school and need support. My research at Stevens has let me explore the potential good AI can bring to public health issues such as mental health support shortages and postpartum care. I have also spent the last two years as a Pinnacle Peer Advisor to help incoming freshmen transition to the college life. Not only is this kind of work satisfying to me, but it's also always a great learning experience too!</p>
+      <p>Outside of work, I enjoy making video games and producing music. It's a great creative outlet, and it's always fun to show my friends what I've been working on.</p>
     </section>
 
     <br>
@@ -69,52 +71,116 @@
       </div>
       <div class="dropdown-body">
 		<br>
-		<p>Over the last few years,&nbsp;AI has seen some incredible developments.</p>
-		<p>I quickly realized that I had a unique oppurtunity to work with and learn AI systems as they were being developed.</p>
-		<p>I developed a passion for Artificial Intelligence,&nbsp;especially with its potential in providing public goods</p>
+		<p>Over the last few years,&nbsp;AI has seen some incredible developments. I've spent the last two years applying its power in fields from healthcare to materials science.</p>
 		
 		<br>
     <hr>
     <br>
 		
     <article class="info-block">
+      <h1 class="info-block-title">Egghead: Chubb's Hackathon Challenge</h1>
+
+      <br>
+
+      <p>I participated in the <a href="https://ailab.stevens.edu/hackathon/" target="_blank">2026 Stevens Business + AI Hackathon</a> with my friend. This was my first hackathon, so building and presenting an AI model on a short timescale was both a lot of fun and a great learning experience.</p>
+
+      <br>
+
+      <p>Teams were tasked with building an AI model in 6 hours to tackle challenges given by the event's company sponsors. My team, the Eggheads, decided to approach <a href="https://www.chubb.com/" target="_blank">Chubb's</a> challenge.</p>
+      <p>Chubb wanted an early warning system to detect emerging global risks before they impact the world. By monitoring public news and bulletin services, the warning system would be able to give clear, actionable alerts to keep insurance companies ahead of the game.</p>
+
+      <br>
+
+      <p>My team chose to start with a small scope and focus on disease outbreak prediction. By building a robust, scalable design, our model could then be expanded to whatever global systems a company would want to track.</p>
+      <p>We architected a system where an LLM dynamically extracted events from the WHO disease outbreak bulletin and fed them into an EPI model. From there, the severity of each event was tracked, and, if the score was high enough, the LLM produced an alert detailing the disease and its predicted impact.</p>
+
+      <br>
+
+      <p>Our showcase involved a backtest of taking real bulletins from the end of 2019 into January of 2020. Given reports on the spread of pneumonia in Wuhan, China, an alert was raised. The alert said that this disease was spreading quickly and should be monitored. In reality, this pneumonia outbreak was the beginning of Covid.</p>
+      <p>A global alert came from Dr. Zhong Nanshanon Jan 20, 2020. Our model raised an alert starting on a bulletin from Jan 11, 2020. This 9-day difference can lead to huge impacts on how companies respond to a global crisis. By seeing a crisis before its impacts, a reactive response becomes a proactive response.</p>
+      <p>Although this backtest was limited in scope, it demonstrated the potential of the framework we had developed.</p>
+
+      <div class="image-row">
+        <img alt="My team's presentation" src="images/Hackathon/Presentation.png" class="expandable">
+        <img alt="An example alert from our system" src="images/Hackathon/Alert.png" class="expandable">
+        <img alt="Me at the podium presenting" src="images/Hackathon/Closeup.png" class="expandable">
+      </div>
+    </article>
+
+    <br>
+    <hr>
+    <br>
+
+    <article class="info-block">
+      <h1 class="info-block-title">Designing Extraordinary Magnetoresistance (EMR) Sensors</h1>
+
+      <br>
+
+      <img alt="EMR Device Designs" src="images/EMR/Devices.png" class="left-image expandable">
+
+      <p>EMR devices can detect very weak changes in magnetic fields, having applications in fields ranging from biomedical diagnostics to dense data storage.</p>
+      <p>However, these microscopic devices are expensive to manufacture, requiring expensive materials such as gold and advanced fabrication equipment. Testing for new designs, especially in broad design spaces such as branching structures, is slow and inefficient.</p>
+      <p>Using machine learning, I was able to predict highly sensitive EMR designs, narrowing down the search space significantly. I then presented my work at the <a href="https://www.stevens.edu/events/stevens-undergraduate-research-symposium" target="_blank">2026 Stevens Undergraduate Research Symposium</a>.</p>
+
+      <br>
+
+      <p>Under Dr. Eui-Hyeok Yang, work was split between two teams: the COMSOL Simulation team and the AI Development team. COMSOL simulated different designs and geometries, and I used this data to train a surrogate model (XGBoost) capable of taking a device's geometry and predicting its sensitivity.</p>
+      <p>From there, Bayesian optimization was used to effectively work backwards. The optimization process would find locally optimal designs, and then output the geometry parameters for that design. Through this method, highly sensitive EMR designs could be identified efficiently.</p>
+
+      <br>
+
+      <p>For the sake of validation, the model was only trained on disc, bar, and off-center disc EMR designs. These design branches have been heavily researched, so it was easy to compare my model's outputs to existing designs and validate the model. However, the framework developed can be extended to more novel applications such as branching structures.</p>
+      <p>A major learning point was in managing what data the model sees. In training, the COMSOL datasets included parameters such as magnetic field and resistance. However, both values are used to calculate a device's sensitivity, which led to leakage in my model's training. By giving my model a shortcut to the answer, predictions could be made for the wrong reasons.</p>
+      <p>I was able to catch this issue when performing SHAP analysis on the model and seeing those fields being heavily favored. Future work on this project would focus on controlling the information the model sees to force it to make stronger and more nuanced relationships between device geometries.</p>
+
+      <div class="image-row">
+        <img alt="The research presentation poster" src="images/EMR/Poster.png" class="expandable">
+        <img alt="A SHAP dependence plot" src="images/EMR/Shap.png" class="expandable">
+        <img alt="Me presenting at the symposium" src="images/Placeholder.png" class="expandable">
+      </div>
+
+      <p>
+    </article>
+
+    <br>
+    <hr>
+    <br>
+
+    <article class="info-block">
       <h1 class="info-block-title">HeraHealth Postpartum Hemorrhage Tracker</h1>
 
       <br>
 
-      <img id="HeraHealth-Logo" alt="HeraHealth Logo" src="images/HeraHealth/HeraHealth-Logo.jpg" class="left-image expandable">
+      <img id="HeraHealth-Logo" alt="HeraHealth Logo" src="images/HeraHealth/HeraHealth-Logo.jpg" class="right-image expandable">
 
-      <p>I am currently working with <a href="https://www.linkedin.com/company/herahealthinc/about/" target="_blank">HeraHealth</a>, a women's health technology startup to develop an AI-powered Postpartum Hemorrhage Tracking App.</p>
-      <p>My main role on the team is to train, optimize, and implement a computer vision model capable of tracking blood loss in new mothers via pictures of their pads. However, as with many startups, I am wearing many hats.</p>
-      <p>This has given me the unique and exciting opportunity to see all sides of a application's development, including frontend and backend development, community outreach and user testing, and the legal hurdles of developing a health application.</p>
-
-      <br>
-
-      <p>For new mothers, the leading cause of death is postpartum hemorrhaging, which is a risk that can last up to 12 weeks after birth. With the HeraHealth app, these mothers would be able to automatically track and detect this hemorrhaging before it becomes life threatening.</p>
-      <p>Being able to use AI to tackle a dangerous problem that affects some of our most vulnerable people was a very inspiring oppurtunity for me. </p>
+      <p>Today, 200 mothers worldwide will die from postpartum hemorrhaging, the leading cause of maternal deaths. This excessive bleeding after childbirth will cause 70,000 deaths this year, and it remains one of the leading and most preventable causes of maternal death.</p>
+      <p><a href="https://www.linkedin.com/company/herahealthinc/about/" target="_blank">HeraHealth</a> is determined to fight this statistic and help new mothers.</p>
 
       <br>
 
-      <p>Training the computer vision model was a powerful learning experience for me. I was lucky to have a team with absolute pros who were kind enough to guide me through the process, explain the logic behind the training, and point me to great resources for self study</p>
-      <p>Due to the medical nature of the project, finding data for our training was difficult. We had a single dataset that showed pads labelled with the amount of blood on them, but it could only do so much to improve model accuracy. We ended up using data augmentation methods to extend the dataset and make the model more robust with different image qualities, angles, and lighting.</p>
-      <p>Our model was tested, showed extremely high accuracy, even with image conditions it had not been previusly exposed to, and is now ready to be implemented into the application.</p>
+      <p>For my senior capstone project at Stevens, I had the pleasure to work with HeraHealth on this mission. I worked with a team of 6 to design the HeraHealth PPH Tracking app.</p>
+      <p>With the app, any smartphone can be used to upload pictures of menstrual pads to be analyzed by our AI model. The model can then, in seconds, closely estimate the amount of blood loss on the pad and whether or not immediate intervention is needed. Medical staff using the app can sync with their patients to track blood loss and know when intervention is needed.</p>
 
       <br>
 
-      <img alt="Test results of the computer vision model" src="images/HeraHealth/Test-Results.png" class="expandable">
+      <p>We finetuned Meta's <a href="https://ai.meta.com/research/dinov3/" target="_blank">DINOv3</a> computer visionmodel to serve as the app's blood loss detection system.</p>
+      <p>Training involved using a custom-made dataset of menstrual pad images with varying blood loss. To further expand our dataset and improve model robustness, we employed data augmentation techniques. A key motivation behind the augmentation was to also emulate photos that would be submitted by mothers, so we implement different lighting, blur, noise, and other poor conditions in our augmentation.</p>
 
       <br>
 
-      <p>With the AI model done, I have shifted my attention to 3 other aspects of the project: the app, the users, and the law.</p>
-      <p>We are currently creating a React-powered app to allow for easy cross-platform publishing. While our main goal is to develop mobile applications, we are also keeping the app easily modifiable and scalable to allow for future work such as a website.</p>
-      <p>I am also spending time reaching out to mothers and healthcare professionals to interview them. Through these interviews, I can help inform design decisions, better understand my target demographic, and foster a connection with our potential userbase.</p>
-      <p>Working on an app designed for medical use has also required me and my team to be very conscientious about HIPPA compliance and general user privacy. Adhering closely to cybersecurity principles and methodologies had been a direct way of addressing these concerns. However, we have also reached out to health law experts throughout our development cycle to ensure compliance and make our application properly secure.</p>
+      <p>Since the PPH app is classified as a medical device (SAMD), we had to adhere to strict guidelines and perform extensive validation on our work.</p>
+      <p>Much of my time was spent writing documentation describing the app's design and alignment with international standards such as the ISO and IEC. Validating the app and backend infrastructure via test cases was equally important, especially since users' sensitive medical data would be stored on their accounts. </p>
 
       <br>
 
-      <p>Our timeline is to finish the app by the end of December, then perform user testing and quality assurance in the Spring as we prepare for a full release at the summer's start.</p>
-      <p>This entire development process has been an amazing learning experience for me, and I am grateful to be able to work on such an impactful issue with such a talented team.</p>
-      <p>My experience with working on a production-level project is teaching me a web of skills that I will carry with me into my future projects</p>
+      <p>We presented our project at the <a href="https://www.stevens.edu/stevens-innovation-expo" target="_blank">Stevens Innovation Expo 2026</a> at the end of the school year.</p>
+      <p>As my team ended their time with HeraHealth, the app was making significant progress towards its full release. 4 hospitals, including one in Kenya, piloted a demo build of the app to begin the feedback process. This was also a major step in the app's FDA approval process, acting as one of the last major barriers to full release for the startup.</p>
+
+      <div class="image-row">
+        <img alt="The research presentation poster" src="images/Placeholder.png" class="expandable">
+        <img alt="A screenshot of the app" src="images/Placeholder.png" class="expandable">
+        <img alt="My team at the Innovation Expo" src="images/HeraHealth/Expo.jpg" class="expandable">
+      </div>
     </article>
 
     <br>
@@ -124,34 +190,32 @@
 		<article class="info-block">
       <h1 class="info-block-title">PECO: Peer Support Coach</h1>
 
+      <p>Millions of people worldwide suffer from mental health issues, yet access to professional support is limited. Many turn to online resources such as <a href="https://www.7cups.com/" target="_blank">7 Cups</a> for support, but this comes from non-professional volunteers.</p>
+      <p>While their intentions are good, untrained volunteers may end up not helping or even harming those seeking support. A safe, scalable solution to train these volunteers can cause a significant improvement to the quality of support seekers receive.</p>
+      
       <br>
 
-      <p>Under the mentorship of Dr. Sang Won Bae and Dr. Rahul Islam,&nbsp;I helped design <strong>PECO</strong>,&nbsp;an AI-powered mental health support coaching system.</p>
-      <p>This coaching system helped to address the shortage of professional mental health support in the United States.</p>
-      <p>I presented this work at the <a href="https://www.stevens.edu/semcer-center-for-healthcare-innovation/next-gen-healthcare-innovators-symposium-2025" target="_blank">Stevens Next-Gen Healthcare Innovators Symposium 2025</a>.</p>
+      <p>Under the mentorship of Dr. Sang Won Bae and Dr. Rahul Islam,&nbsp;I helped design <strong>PECO</strong>,&nbsp;an AI-powered mental health support coaching system and presented the system at the <a href="https://www.stevens.edu/semcer-center-for-healthcare-innovation/next-gen-healthcare-innovators-symposium-2025" target="_blank">Stevens Next-Gen Healthcare Innovators Symposium 2025</a>.</p>
+
       <br>
 
       <img alt="An example of PECO's chat interface" src="images/PECO/Chat-Example.png" class="left-image expandable" width="420" height="240">
       <br>
-      <p>PECO (AI-Powered <strong>PE</strong>er <strong>CO</strong>aching System) is a novel training platform designed to strengthen the skills of peer supporters. PECO enables users to engage in simulated conversations with an AI-generated support seeker and receive live feedback from FIDO (<strong>F</strong>eedback for <strong>I</strong>mproving <strong>D</strong>ial<strong>O</strong>gue). FIDO provides indirect, descriptive feedback that highlights opportunities for improvement while encouraging users to revise their own responses. This reflective feedback style is intended to preserve the user's voice and foster active learning.</p>
+      <p>PECO (AI-Powered <strong>PE</strong>er <strong>CO</strong>aching System) is a training platform designed to strengthen the skills of peer supporters. Users will have a conversation with a simulated support seeker, and as they do, they will receive live feedback telling them how to improve their responses.</p>
+      <p>The simulated seeker is built upon <a href="https://github.com/ruiyiw/patient-psi" target="_blank">Patient-Ψ</a>, a large language model (LLM) framework that employs Cognitive Conceptualization Profiles to generate realistic mental health patients in varied scenarios. When starting a conversation with these simulated seekers, users will experience a wide range of personalities and traits, such as hostile or verbose, giving them extensive practice in handling different situations.</p>
+      <p>As the conversation progresses, FIDO (<strong>F</strong>eedback for <strong>I</strong>mproving <strong>D</strong>ial<strong>O</strong>gue) reads the user's responses and evaluates them based on professional support strategies. From there, FIDO gives feedback on how to improve the support messages, coaching the user as they practice. FIDO is a custom model fine-tuned on Meta's <a href="https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E" target="blank">LLaMA 4 Scout model</a>.</p>
+      <p>FIDO (<strong>F</strong>eedback for <strong>I</strong>mproving <strong>D</strong>ial<strong>O</strong>gue). FIDO provides indirect, descriptive feedback that highlights opportunities for improvement while encouraging users to revise their own responses. This reflective feedback style is intended to preserve the user's voice and foster active learning.</p>
+
       <br>
-      <p>PECO integrates two AI models: the simulated seeker and the feedback engine, FIDO. The simulated seeker is built upon <a href="" target="_blank">Patient-Ψ</a>, a large language model (LLM) framework that employs Cognitive Conceptualization Profiles to generate realistic mental health patients in varied scenarios. FIDO is a custom model fine-tuned on Meta's <a href="" target="blank">LLaMA 4 Scout model</a>.</p>
-      <br>
-      <p>Fine tuning was performed using annotated datasets from studies on mental health conversations, including labels for support strategies and seeker emotions and tendencies. FIDO provides feedback by generating a response to messages from the simulated seeker, comparing to the user's proposed message, and instructing on where improvements can be made. Additionally, PECO allows users to select specific traits in seekers they want to practice with, such as “hostile” or “verbose”.</p>
-      <br>
-      <p>This work was presented at the <a href="https://www.stevens.edu/semcer-center-for-healthcare-innovation/next-gen-healthcare-innovators-symposium-2025" target="_blank">Stevens Next-Gen Healthcare Innovators Symposium 2025</a>, a research symposium dedicated to technology-driven healthcare solutions.</p>
+      
+      <p>This was my first true AI project, and the biggest lesson I learned is that asking for help is the best way to learn. The biggest leaps of progress I made were always after I asked others for advice, either from my advisors or from experts I approached myself.</p>
+      <p>The advice I remember best is a graduate student teaching me about RAG pipeline design. It really helped me understand how the architecture of the AI system is just as important as the models you use. Although we eventually chose not to use RAG pipeline in the final system, the insights I gained from researching it helped me with the rest of the project.</p>
 
       <div class="image-row">
-        <img alt="A diagram of PECO" src="images/PECO/PECO-Diagram.jpg" class="expandable" width="1726" height="1336">
-        <img alt="The research presentation poster" src="images/PECO/PECO-Poster.png" class="expandable" width="400" height="600">
-        <img alt="A diagram of FIDO" src="images/PECO/FIDO.jpg" class="expandable" width="2200" height="1700">
+        <img alt="A diagram of PECO" src="images/PECO/PECO-Diagram.jpg" class="expandable">
+        <img alt="The research presentation poster" src="images/PECO/PECO-Poster.png" class="expandable">
+        <img alt="A diagram of FIDO" src="images/PECO/FIDO.jpg" class="expandable">
       </div>
-
-      <br>
-
-      <p>I personally learned a lot from this research. It was my first experience working with AI to solve a real problem, and that was both exciting and challenging.</p>
-      <p>The biggest lesson I learned is that asking for help is the best way to learn. The biggest leaps of progress I made were always after I asked others for advice, either from my advisors or from experts I approached myself. They always had great insight and introduced me to many powerful tricks and tools that helped me on my journey.</p>
-      <p>This research also helped kickstart my fascination with AI and the public good it can bring. Applications of Artificial Intelligence in fields such as healthcare can provide massive amounts of good to society, and it has been very inspiring to work on projects that can contribute to this common good.</p>
     </article>
 		
 		<br>
@@ -166,7 +230,7 @@
         <br>
         <p>Coding has been a passion in my life since my Freshman year of high school.</p>
         <p>Covid was still keeping us all trapped indoors, so I decided on a whim to learn Python, and I just kept going from there.</p>
-        <p>Through both school and personla projects, I have been developing my knowledge on programming constantly</p>
+        <p>Through both school and personal projects, I have been developing my knowledge on programming constantly</p>
 
         <br>
         <br>
